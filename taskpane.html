@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>EYFlash</title>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<style>
+  body { font: 14px/1.4 "Segoe UI", sans-serif; margin: 12px; color: #1f1f1f; }
+  label, button, select, input { display: block; width: 100%; margin: 6px 0; box-sizing: border-box; }
+  button { padding: 6px; cursor: pointer; } button:focus-visible, select:focus-visible { outline: 2px solid #0f6cbd; }
+  pre { white-space: pre-wrap; background: #f5f5f5; padding: 8px; min-height: 4em; }
+</style></head>
+<body>
+  <label>Excel workbook <input id="file" type="file" accept=".xlsx,.xlsm"></label>
+  <label>Number format <select id="locale"><option value="en">1,234.56</option><option value="vi">1.234,56</option></select></label>
+  <label>Excel name <select id="names" disabled></select></label>
+  <button id="link" disabled>Link table at cursor</button>
+  <button id="sync" disabled>Sync all linked tables</button>
+  <pre id="log" aria-live="polite"></pre>
+  <script type="module" src="taskpane.js"></script>
+</body></html>
